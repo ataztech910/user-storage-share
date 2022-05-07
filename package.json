@@ -11,10 +11,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/chrome": "^0.0.184",
     "file-loader": "^6.2.0",
     "json-loader": "^0.5.7",
     "ts-loader": "^9.3.0",
     "vue": "^3.2.25",
+    "vue-router": "^4.0.15",
     "webpack": "^5.72.0"
   },
   "devDependencies": {

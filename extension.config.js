@@ -9,14 +9,14 @@ module.exports = {
       patterns: [
         { from: path.join(srcDir, "extension/manifest.json"), to: path.join(__dirname, "./dist") },
         { from: path.join(srcDir, "extension/logo.png"), to: path.join(__dirname, "./dist") },
+        { from: path.join(srcDir, "extension/devtool.html"), to: path.join(__dirname, "./dist") },
       ],
     }),
   ],
   entry: {
     background: path.join(srcDir, "extension/background.ts"),
     content_script: path.join(srcDir, "extension/content_script.ts"),
-    // manifest: path.join(srcDir, "extension/manifest.json"),
-    // logo: path.join(srcDir, "extension/logo.png"),
+    devtool: path.join(srcDir, "extension/devtool.ts"),
   },
   output: {
     path: path.join(__dirname, "./dist"),
@@ -33,7 +33,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.png$/,
+        test: /\.png|html$/,
         loader: "file-loader",
         options: {
           name: '[name].[ext]',

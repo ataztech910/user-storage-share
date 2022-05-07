@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
   
-    "name": "Chrome Extension Vue + Vite",
+    "name": "Chrome Extension. User share data",
     "description": "Chrome Extension, TypeScript, Visual Studio Code",
     "version": "1.0",
   
@@ -9,6 +9,8 @@
       "default_icon": "logo.png",
       "default_popup": "popup/index.html"
     },
+
+    "devtools_page": "devtool.html",
   
     "content_scripts": [
         {
@@ -22,7 +24,8 @@
     },
   
     "permissions": [
-      "storage"
+      "storage",
+      "debugger"
     ],
   
     "host_permissions": [
