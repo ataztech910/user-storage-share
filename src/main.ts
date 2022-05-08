@@ -6,6 +6,8 @@ import DataTable from 'primevue/datatable'
 import InputText from 'primevue/inputtext'
 import Column from 'primevue/column'
 import Dropdown from 'primevue/dropdown'
+import TabView  from 'primevue/tabview'
+import TabPanel   from 'primevue/tabpanel'
 import 'primevue/resources/primevue.min.css'
 import 'primevue/resources/themes/bootstrap4-light-blue/theme.css'
 import 'primeicons/primeicons.css'
@@ -17,4 +19,6 @@ createApp(App)
     .component('InputText', InputText)
     .component('Column', Column)
     .component('Dropdown', Dropdown)
+    .component('TabView', TabView)
+    .component('TabPanel', TabPanel)
     .mount('#app')
