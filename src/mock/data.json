@@ -1,0 +1,107 @@
+{
+    "url": "stackoverflow.com",
+    "cookies": [
+        {
+            "domain": ".stackoverflow.com",
+            "expirationDate": 2682374400.382119,
+            "hostOnly": false,
+            "httpOnly": true,
+            "name": "prov",
+            "path": "/",
+            "sameSite": "unspecified",
+            "secure": false,
+            "session": false,
+            "storeId": "0",
+            "value": "23701f1a-bc3d-8e98-074a-8a740e5ade91"
+        },
+        {
+            "domain": ".stackoverflow.com",
+            "expirationDate": 1715110578,
+            "hostOnly": false,
+            "httpOnly": false,
+            "name": "_ga",
+            "path": "/",
+            "sameSite": "unspecified",
+            "secure": false,
+            "session": false,
+            "storeId": "0",
+            "value": "GA1.2.1330381261.1616660149"
+        },
+        {
+            "domain": ".stackoverflow.com",
+            "expirationDate": 1682639747.907156,
+            "hostOnly": false,
+            "httpOnly": false,
+            "name": "OptanonConsent",
+            "path": "/",
+            "sameSite": "no_restriction",
+            "secure": true,
+            "session": false,
+            "storeId": "0",
+            "value": "datestamp=2022-04-27+23%3a55%3a47Z&groups=C0001%3a1%2cC0002%3a1%2cC0003%3a1%2cC0004%3a1%2cC0005%3a0"
+        },
+        {
+            "domain": ".stackoverflow.com",
+            "expirationDate": 1684876108,
+            "hostOnly": false,
+            "httpOnly": false,
+            "name": "__gads",
+            "path": "/",
+            "sameSite": "unspecified",
+            "secure": false,
+            "session": false,
+            "storeId": "0",
+            "value": "ID=1886f28328253d90:T=1651180108:S=ALNI_MblPE-aPZfvEYPMkMENGb0lLthl3g"
+        },
+        {
+            "domain": ".stackoverflow.com",
+            "expirationDate": 1652124978,
+            "hostOnly": false,
+            "httpOnly": false,
+            "name": "_gid",
+            "path": "/",
+            "sameSite": "unspecified",
+            "secure": false,
+            "session": false,
+            "storeId": "0",
+            "value": "GA1.2.1698628481.1651699408"
+        },
+        {
+            "domain": ".stackoverflow.com",
+            "expirationDate": 1667936177.901016,
+            "hostOnly": false,
+            "httpOnly": true,
+            "name": "acct",
+            "path": "/",
+            "sameSite": "no_restriction",
+            "secure": true,
+            "session": false,
+            "storeId": "0",
+            "value": "t=5TMEMmPfZKkxk30SApcnQL7xoh44kPql&s=6dHOhN5oOn229VVAEwpKpM2%2fiWeFl7de"
+        },
+        {
+            "domain": ".stackoverflow.com",
+            "expirationDate": 1652038638,
+            "hostOnly": false,
+            "httpOnly": false,
+            "name": "_gat",
+            "path": "/",
+            "sameSite": "unspecified",
+            "secure": false,
+            "session": false,
+            "storeId": "0",
+            "value": "1"
+        }
+    ],
+    "storage": {
+        "wb21:awaytime": "42549",
+        "wb21:lastblur": "1641379996481",
+        "wb21:wearing": "{\"45580\":{\"t\":1641379936564,\"v\":{\"i\":0,\"x\":0,\"y\":0,\"s\":100,\"r\":0}},\"306149\":{\"t\":1641379936564,\"v\":{\"i\":0,\"x\":0,\"y\":0,\"s\":100,\"r\":0}},\"3565826\":{\"t\":1641379936564,\"v\":{\"i\":0,\"x\":0,\"y\":0,\"s\":100,\"r\":0}}}",
+        "DevStory:undefined:undefined:LikedTags": "javascript typescript reactjs redux aws-lambda vue.js",
+        "copyBudget": "2",
+        "se:fkey": "e156b9aaad97f98c94b2f1a7c365763f00f95e3af44cdbc81996f9d22cc46867,1639085191",
+        "wb21:isparticipating": "{\"4371581\":{\"t\":1641379936282,\"v\":true}}",
+        "wb21:unreadcount": "{\"4371581\":{\"t\":1641379936392,\"v\":1}}",
+        "DevStory:Job:-1:Title": "Team Lead Engeneer"
+    }
+}
