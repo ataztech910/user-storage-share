@@ -1,4 +1,3 @@
-
 <script setup lang="ts">
 import { computed, ref } from "vue";
 const props = defineProps({
@@ -10,7 +9,9 @@ const editingRows = ref([])
 
 const onRowEditSave = (event: any) => {
     let { newData, index } = event
-    product.value![index] = newData
+    if (product.value) {
+        product.value[index] = newData
+    }
 }
 
 const statuses = ref([
@@ -37,7 +38,7 @@ const getStatusLabel = (status: string) => {
 </script>
 
 <template>
-<div class="card" style="height: calc(100vh - 143px)">
+<div class="card">
   <DataTable :value="product" editMode="row" dataKey="id" v-model:editingRows="editingRows" @row-edit-save="onRowEditSave" :scrollable="true" scrollHeight="flex">
         <Column field="code" header="Code" style="width:20%">
             <template #editor="{ data, field }">
@@ -72,5 +73,8 @@ const getStatusLabel = (status: string) => {
 </template>
 
 <style>
-
+.card {
+    height: calc(100vh - 143px);
+    min-height: 500px;
+}
 </style>

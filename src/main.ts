@@ -9,7 +9,7 @@ import Dropdown from 'primevue/dropdown'
 import TabView  from 'primevue/tabview'
 import TabPanel   from 'primevue/tabpanel'
 import 'primevue/resources/primevue.min.css'
-import 'primevue/resources/themes/bootstrap4-light-blue/theme.css'
+import 'primevue/resources/themes/vela-green/theme.css'
 import 'primeicons/primeicons.css'
 
 createApp(App)
