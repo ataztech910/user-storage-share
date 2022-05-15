@@ -8,6 +8,9 @@ const cookieStringToArray = (cookie: string): {key: string, value: string}[]=> {
 }
 
 const objectToArray = (object: Partial<any>) => {
+    if (!object) {
+        return []
+    }
     const keys = Object.keys(object)
     let result: {key: string, value: string}[] = []
     if (keys.length > 0) {

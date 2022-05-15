@@ -1,35 +1,32 @@
 import defaultData from '../mock/object.json'
-import { cookieStringToArray } from '../utils/convertions'
-const currentBrowser = chrome
-const initBrowserData = async (isDevelop = false) => {
+import { cookieStringToArray, objectToArray } from '../utils/convertions'
+
+const currentBrowser = chrome;
+const initBrowserData = (isDevelop = false) => {
   if (isDevelop) {
-    return defaultData
+    return new Promise((resolve) => resolve(defaultData))
   }
-  if (!currentBrowser || !currentBrowser.tabs) {
-    return null
-  }
-  const dataObject = {
-    url: '',
-    cookies: {} as any,
-    storage: {} as any
-  }
-  const [tab] = await currentBrowser.tabs.query({ active: true, currentWindow: true })
-  if (tab?.url) {
-    try {
-      const url = new URL(tab.url)
-      dataObject.url = url.hostname
-      currentBrowser.storage.sync.get(null, function (result) {
-        if (result.fromPage?.data) {
-          dataObject.storage = JSON.parse(result.fromPage.data)
-          dataObject.cookies = cookieStringToArray(dataObject.storage.cookies)
-          if (dataObject.storage && dataObject.storage.cookies) {
-            delete dataObject.storage.cookies
-          }
+  return new Promise(async (resolve) => {
+    const dataObject: Partial<any> = {
+      url: '',
+      cookies: {} as any,
+      storage: {} as any
+    }
+    await currentBrowser.storage.sync.get(null, function (result) {
+      if (result.fromPage?.data) {
+        const storage = JSON.parse(result.fromPage.data)
+        dataObject.storage = objectToArray(storage.localStorage)
+        dataObject.cookies = cookieStringToArray(storage.cookies)
+        dataObject.url = storage.url
+        if (dataObject.storage && dataObject.storage.cookies) {
+          delete dataObject.storage.cookies
         }
-      })
-    } catch {}
-  }
-  return dataObject
+        console.log('result', dataObject)
+        resolve(dataObject)
+      }
+    })
+  })
+  
 }
 
 export { initBrowserData }

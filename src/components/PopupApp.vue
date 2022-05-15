@@ -1,20 +1,20 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 import { initBrowserData } from '../core/browser-core'
 import defaultData from '../mock/default.json'
 import Cookies from './CookiesLayout.vue'
 import LocalStorageLayout from './LocalStorageLayout.vue'
 
 const data = ref()
-const products2 = ref()
 
 onMounted(
   async () => {
     console.log('started')
-    products2.value = defaultData.data
-    data.value = await initBrowserData(true)
-    console.log(data.value)
-  })
+    initBrowserData(false).then((result) => {
+      console.log(result)
+      data.value = result
+    })
+});
 </script>
 
 <template>
@@ -23,7 +23,7 @@ onMounted(
       <Cookies :cookies="data ? data.cookies : []"/>
     </TabPanel>
     <TabPanel header="Local storage">
-      <LocalStorageLayout :storage="data ? data.storage.localStorage : {}" />
+      <LocalStorageLayout :storage="data ? data.storage : []" />
     </TabPanel>
   </TabView>
 </template>

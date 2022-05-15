@@ -5,7 +5,7 @@ const props = defineProps({
   storage: Object
 })
 
-const storage = computed(() => objectToArray(props.storage as Partial<any>))
+const storage = computed(() => props.storage)
 
 </script>
 
