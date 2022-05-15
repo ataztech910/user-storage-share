@@ -1,21 +1,21 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, defineProps } from 'vue'
 
 defineProps<{ msg: string }>()
 
 const count = ref(0)
 
-chrome.tabs.query({currentWindow: true, active: true}, function(tabs: any) {
-    chrome.debugger.attach({ tabId: tabs[0].id }, '1.2')
+chrome.tabs.query({ currentWindow: true, active: true }, function (tabs: any) {
+  chrome.debugger.attach({ tabId: tabs[0].id }, '1.2')
 })
-
 
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
-
-  <div>This is a devtools</div>
+  <div>
+    <h1>{{ msg }}</h1>
+    <div>This is a devtools</div>
+  </div>
 </template>
 
 <style scoped>

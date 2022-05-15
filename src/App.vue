@@ -1,4 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+
+console.log('started')
+
+</script>
 
 <template>
   <router-view></router-view>

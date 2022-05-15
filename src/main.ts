@@ -8,6 +8,8 @@ import Column from 'primevue/column'
 import Dropdown from 'primevue/dropdown'
 import TabView  from 'primevue/tabview'
 import TabPanel   from 'primevue/tabpanel'
+import Accordion    from 'primevue/accordion'
+import AccordionTab    from 'primevue/accordiontab'
 import 'primevue/resources/primevue.min.css'
 import 'primevue/resources/themes/vela-green/theme.css'
 import 'primeicons/primeicons.css'
@@ -21,4 +23,6 @@ createApp(App)
     .component('Dropdown', Dropdown)
     .component('TabView', TabView)
     .component('TabPanel', TabPanel)
+    .component('Accordion', Accordion)
+    .component('AccordionTab', AccordionTab)
     .mount('#app')

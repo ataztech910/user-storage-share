@@ -1,11 +1,9 @@
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
-      console.log(sender.tab ?
-                  "from a content script:" + sender.tab.url :
-                  "from the extension");
-        console.log(request)
+      console.log('sender?.tab?.url', sender?.tab?.url)
+      console.log('fromPage', request.msg);
         chrome.storage.sync.set({'fromPage': {pageUrl: sender?.tab?.url || "no domain", data: request.msg}}, function () {
-          console.log("Just get", request.msg)
+          console.log("local storage")
         });
         sendResponse({farewell: "goodbye"});
     }

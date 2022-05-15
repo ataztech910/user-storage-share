@@ -7,11 +7,12 @@
     "build": "vue-tsc --noEmit && vite build",
     "build:extension_dev": "webpack --config extension.config.dev.js",
     "build:extension_prod": "webpack --config extension.config.prod.js",
-    "build:all": "npm run build && npm run build:extension_dev",
+    "build:all": "yarn build && yarn build:extension_dev",
     "preview": "vite preview"
   },
   "dependencies": {
     "@types/chrome": "^0.0.184",
+    "eslint": "^8.15.0",
     "file-loader": "^6.2.0",
     "json-loader": "^0.5.7",
     "primeicons": "^5.0.0",
