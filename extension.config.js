@@ -17,6 +17,7 @@ module.exports = {
     background: path.join(srcDir, "extension/background.ts"),
     content_script: path.join(srcDir, "extension/content_script.ts"),
     devtool: path.join(srcDir, "extension/devtool.ts"),
+    compress: path.join(srcDir, "extension/compress.ts"),
   },
   output: {
     path: path.join(__dirname, "./dist"),
